@@ -19,7 +19,7 @@ cd ians
 chmod +x install.sh
 ```
 ```
-./install.sh
+sudo ./install.sh
 ```
 ```
 sudo python3 ians.py
@@ -43,7 +43,7 @@ cd ians
 chmod +x install.sh
 ```
 ```
-./install.sh
+sudo ./install.sh
 ```
 ```
 sudo python3 ians.py
