@@ -74,7 +74,6 @@ def initialize():
         if os.name == "nt":
                 sniffer.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
 
-        ttl = {32: "windows 98", 64: "linux", 128: "windows 7/8/10", 254: "cisco router", 255:"solaris"}
         while True:
             data = sniffer.recvfrom(65535)[0]
             ip_header = IP(data[0:20])
@@ -83,10 +82,6 @@ def initialize():
             console.print("[bold blue][+][/bold blue] Protocol: %s %s -> %s " % (ip_header.protocol, ip_header.src_address, ip_header.dst_address))
             console.print(f"Version: [bold blue]{ip_header.ver}[/bold blue]")
             console.print(f"Header Length: [bold blue]{ip_header.ihl}[/bold blue] TTL: [bold blue]{ip_header.ttl}[/bold blue]")
-            try:
-                console.print(f"OS: [bold blue]{ttl[ip_header.ttl]}[/bold blue]")
-            except KeyError:
-                console.print(f"OS: [bold blue]?[/bold blue]")
 
             if ip_header.protocol == "ICMP": 
                 offset = ip_header.ihl * 4
