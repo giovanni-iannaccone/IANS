@@ -77,7 +77,6 @@ def initialize():
         while True:
             data = sniffer.recvfrom(65535)[0]
             ip_header = IP(data[0:20])
-            print(f"\n{data}")
 
             console.print("[bold blue][+][/bold blue] Protocol: %s %s -> %s " % (ip_header.protocol, ip_header.src_address, ip_header.dst_address))
             console.print(f"Version: [bold blue]{ip_header.ver}[/bold blue]")
