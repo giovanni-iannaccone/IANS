@@ -22,7 +22,7 @@ sudo ./install.sh
 sudo python3 ians.py
 ```
 
-Don't lost any update: https://github.com/giovanni-iannaccone/ians
+Don't lose any update: https://github.com/giovanni-iannaccone/ians
 OBVIOUSLY EVERYTHING IS WRITTEN FOR EDUCATIONAL PURPOSE, THE USER KNOW WHAT HE IS DOING AND THE AUTHOR IS NOT RESPONSIBLE FOR ANY ILLEGAL USE OF THIS TOOL
 
 <div id="header" align="center">
